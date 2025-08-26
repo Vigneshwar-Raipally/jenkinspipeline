@@ -6,12 +6,6 @@ pipeline {
    }
 
    stages {
-       stage('Clone') {
-           steps {
-               git branch: 'main', url: 'https://github.com/Vigneshwar-Raipally/jenkinspipeline.git'
-           }
-       }
-
        stage('Build') {
            steps {
                echo 'Building the project...'

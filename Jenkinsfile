@@ -8,7 +8,7 @@ pipeline {
    stages {
        stage('Clone') {
            steps {
-               git 'https://github.com/Vigneshwar-Raipally/jenkinspipeline.git'
+               git branch: 'main', url: 'https://github.com/Vigneshwar-Raipally/jenkinspipeline.git'
            }
        }
 
@@ -29,7 +29,7 @@ pipeline {
        stage('Deploy') {
            steps {
                echo "Deploying to ${env.APP_ENV} environment..."
-               // Deployment logic here
+               // Deployment logic here (e.g., copy WAR to Tomcat)
            }
        }
    }
